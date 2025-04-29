@@ -1,7 +1,7 @@
 # ⚡ bot-template
 
-![Build](https://img.shields.io/github/actions/workflow/status/30jannik06/bot-template/ci.yml?branch=main)
-![License](https://img.shields.io/github/license/30jannik06/bot-template)
+![Build](https://img.shields.io/github/actions/workflow/status/30jannik06/dc-bot-template/ci.yml?branch=main)
+![License](https://img.shields.io/github/license/30jannik06/dc-bot-template)
 
 Ein modernes, schnelles und wartbares Discord-Bot-Template mit TypeScript und Discord.js.  
 Ideal für Slash Commands, Events, Umgebungssteuerung und Logging – ready für dein nächstes Projekt!
