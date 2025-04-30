@@ -37,3 +37,6 @@ jobs:
 
       - name: '🛠️ Build Project'
         run: npm run build
+
+      - name: "📝 Generiere SlashCommand-Doku"
+        run: npm run generate:docs

@@ -27,7 +27,8 @@
     "format": "prettier --write \"**/*.{ts,json,js,md}\"",
     "format:check": "prettier --check \"**/*.{ts,jsom,js,md}\"",
     "lint": "eslint . --ext ts --fix",
-    "lint:fix": "eslint . --ext .ts --fix"
+    "lint:fix": "eslint . --ext .ts --fix",
+    "generate:docs": "tsx scripts/generate-commands-doc.ts"
   },
   "dependencies": {
     "boxen": "^8.0.1",
