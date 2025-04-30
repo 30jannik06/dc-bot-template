@@ -2,34 +2,38 @@ name: Build & Lint
 
 on:
   push:
-    branches: ["main"]
+    branches: ['main']
   pull_request:
-    branches: ["main"]
+    branches: ['main']
 
 jobs:
   build:
     runs-on: ubuntu-latest
 
+    strategy:
+      matrix:
+        node-version: [18, 20, 22]
+
     steps:
-      - name: "🔄 Checkout Code"
+      - name: '🔄 Checkout Code'
         uses: actions/checkout@v4
 
-      - name: "📦 Setup Node.js"
+      - name: '📦 Setup Node.js'
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: "🧰 Install Dependencies"
+      - name: '🧰 Install Dependencies'
         run: npm install
 
-      - name: "🧪 Debug: Zeige Root-Dateien"
+      - name: '🧪 Debug: Zeige Root-Dateien'
         run: ls -la
 
-      - name: "🔍 Debug: Zeige ESLint-Konfiguration"
+      - name: '🔍 Debug: Zeige ESLint-Konfiguration'
         run: cat eslint.config.mjs || echo "❌ eslint.config.mjs fehlt"
 
-      - name: "🧼 Lint Code"
+      - name: '🧼 Lint Code'
         run: npm run lint
 
-      - name: "🛠️ Build Project"
+      - name: '🛠️ Build Project'
         run: npm run build
