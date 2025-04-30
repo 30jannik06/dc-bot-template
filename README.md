@@ -53,13 +53,13 @@ NODE_ENV=development
 
 ## ▶️ Scripts
 
-| Befehl             | Beschreibung                                      |
-|--------------------|---------------------------------------------------|
-| `npm run dev`      | Startet den Bot im Entwicklungsmodus (watch)     |
-| `npm run build`    | Erstellt den Build (dist/, ESM & CJS, minified)  |
-| `npm start`        | Startet den Bot im Produktionsmodus (dist)       |
-| `npm run format`   | Formatiert Code mit Prettier                     |
-| `npm run lint`     | Führt ESLint mit Autokorrektur aus              |
+| Befehl           | Beschreibung                                    |
+| ---------------- | ----------------------------------------------- |
+| `npm run dev`    | Startet den Bot im Entwicklungsmodus (watch)    |
+| `npm run build`  | Erstellt den Build (dist/, ESM & CJS, minified) |
+| `npm start`      | Startet den Bot im Produktionsmodus (dist)      |
+| `npm run format` | Formatiert Code mit Prettier                    |
+| `npm run lint`   | Führt ESLint mit Autokorrektur aus              |
 
 ---
 
@@ -83,15 +83,13 @@ src/
 ```ts
 // src/commands/user/ping.ts
 
-import { SlashCommandBuilder } from "discord.js";
+import { SlashCommandBuilder } from 'discord.js';
 
 export const command = {
-  data: new SlashCommandBuilder()
-    .setName("ping")
-    .setDescription("Antwortet mit Pong!"),
+  data: new SlashCommandBuilder().setName('ping').setDescription('Antwortet mit Pong!'),
 
   async execute(interaction) {
-    await interaction.reply("🏓 Pong!");
+    await interaction.reply('🏓 Pong!');
   },
 };
 ```
@@ -110,4 +108,3 @@ export const command = {
 
 ISC License – von [.jannik](https://github.com/30jannik06)  
 Feel free to fork, erweitern oder für dein Projekt nutzen!
-
